@@ -2,8 +2,11 @@ package calculator;
 
 import camp.nextstep.edu.missionutils.Console;
 
+import java.util.Vector;
+
 public class InputView {
     private String sInput;
+    private Vector<Integer> vNum;
     InputView(){}
 
     public void start(){
@@ -17,5 +20,13 @@ public class InputView {
 
     public String getInput(){
         return this.sInput;
+    }
+
+    public void setNums(Vector<Integer> vNum){
+        this.vNum = vNum;
+    }
+
+    public Vector<Integer> getNums(){
+        return this.vNum;
     }
 }
