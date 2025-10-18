@@ -6,13 +6,19 @@ public class Application {
         inputView.start();
 
         InputParser inputParser = new InputParser();
-        inputParser.checkInput(inputView.getInput());
-        inputView.setNums(inputParser.getNums());
 
-        Calculator calculator = new Calculator();
-        calculator.calculate(inputView.getNums());
+        try {
+            inputParser.checkInput(inputView.getInput());
+            inputView.setNums(inputParser.getNums());
 
-        OutputView outputView = new OutputView();
-        outputView.printResult(calculator.getAnswer());
+            Calculator calculator = new Calculator();
+            calculator.calculate(inputView.getNums());
+
+            OutputView outputView = new OutputView();
+            outputView.printResult(calculator.getAnswer());
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            throw e;
+        }
     }
 }
