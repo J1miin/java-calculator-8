@@ -2,11 +2,11 @@ package calculator;
 
 import camp.nextstep.edu.missionutils.Console;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class InputView {
     private String sInput;
-    private Vector<Integer> vNum;
+    private ArrayList<Integer> vNum;
     InputView(){}
 
     public void start(){
@@ -22,11 +22,11 @@ public class InputView {
         return this.sInput;
     }
 
-    public void setNums(Vector<Integer> vNum){
+    public void setNums(ArrayList<Integer> vNum){
         this.vNum = vNum;
     }
 
-    public Vector<Integer> getNums(){
+    public ArrayList<Integer> getNums(){
         return this.vNum;
     }
 }
