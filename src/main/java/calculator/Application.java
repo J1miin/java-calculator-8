@@ -15,6 +15,6 @@ public class Application {
         calculator.calculate(nums);
 
         OutputView outputView = new OutputView();
-        outputView.printResult(calculator.getAnswer(););
+        outputView.printResult(calculator.getAnswer());
     }
 }
