@@ -1,6 +1,6 @@
 package calculator;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class InputParser {
     public static final String NOT_POSITIVE = "양수가 아닙니다.";
@@ -10,10 +10,10 @@ public class InputParser {
 
     private int startIdx =0;
     private String customDelimiter ="";
-    private final Vector<Integer> nums;
+    private final ArrayList<Integer> nums;
 
     InputParser(){
-        this.nums = new Vector<>();
+        this.nums = new ArrayList<>();
     }
 
     public void checkInput(String input) {
@@ -72,7 +72,7 @@ public class InputParser {
         }
     }
 
-    public Vector<Integer> getNums() {
+    public ArrayList<Integer> getNums() {
         return nums;
     }
 
