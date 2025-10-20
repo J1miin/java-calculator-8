@@ -1,6 +1,6 @@
 package calculator;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Calculator {
     private int answer;
@@ -8,8 +8,8 @@ public class Calculator {
         this.answer = 0;
     }
 
-    public void calculate (Vector<Integer> vNum){
-        for (Integer i : vNum) {
+    public void calculate (ArrayList<Integer> nums){
+        for (Integer i : nums) {
             this.answer += i;
         }
     }
